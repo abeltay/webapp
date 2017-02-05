@@ -19,6 +19,6 @@ func main() {
 		ReadTimeout:  10 * time.Second,
 		WriteTimeout: 10 * time.Second,
 	}
-	log.Println("Starting server...")
+	log.Println("Running server...")
 	log.Fatal(s.ListenAndServe())
 }
