@@ -1,0 +1,74 @@
+{{ define "1" }}
+{{ template "header" . }}
+<div class="container">
+	<div class="page-header">
+		<h1>Welcome</h1>
+	</div>
+	<p class="lead">Please provide more information</p>
+	<form class="form-horizontal">
+		<div class="form-group">
+			<div class="col-xs-2 text-right">Type of Purchase</div>
+			<div class="col-xs-2 input-group">
+				<span class="input-group-addon">
+					<input type="radio" name="purchase" value="individual" checked> Individual<br>
+				</span>
+				<span class="input-group-addon">
+					<input type="radio" name="purchase" value="joint"> Joint<br>
+				</span>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-xs-2 text-right">Cash on Hand</div>
+			<input class="col-xs-2" type="text" class="form-control" id="cashonhand" placeholder="1000">
+		</div>
+		<div class="form-group">
+			<div class="col-xs-2 text-right">Planning Area</div>
+			<div class="btn-group col-xs-2">
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Action <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li><a href="#">Ang Mo Kio</a></li>
+					<li><a href="#">Bedok</a></li>
+					<li><a href="#">Bishan</a></li>
+					<li><a href="#">Bukit Batok</a></li>
+					<li><a href="#">Bukit Merah</a></li>
+					<li><a href="#">Bukit Panjang</a></li>
+					<li><a href="#">Bukit Timah</a></li>
+					<li><a href="#">Choa Chu Kang</a></li>
+					<li><a href="#">Clementi</a></li>
+					<li><a href="#">Downtown Core</a></li>
+					<li><a href="#">Geylang</a></li>
+					<li><a href="#">Hougang</a></li>
+					<li><a href="#">Jurong East</a></li>
+					<li><a href="#">Jurong West</a></li>
+					<li><a href="#">Kallang</a></li>
+					<li><a href="#">Mandai</a></li>
+					<li><a href="#">Marine Parade</a></li>
+					<li><a href="#">Museum</a></li>
+					<li><a href="#">Newton</a></li>
+					<li><a href="#">Novena</a></li>
+					<li><a href="#">Orchard</a></li>
+					<li><a href="#">Outram</a></li>
+					<li><a href="#">Pasir Ris</a></li>
+					<li><a href="#">Punggol</a></li>
+					<li><a href="#">Queenstown</a></li>
+					<li><a href="#">River Valley</a></li>
+					<li><a href="#">Rochor</a></li>
+					<li><a href="#">Sembawang</a></li>
+					<li><a href="#">Sengkang</a></li>
+					<li><a href="#">Serangoon</a></li>
+					<li><a href="#">Singapore River</a></li>
+					<li><a href="#">Southern Islands</a></li>
+					<li><a href="#">Tampines</a></li>
+					<li><a href="#">Tanglin</a></li>
+					<li><a href="#">Toa Payoh</a></li>
+					<li><a href="#">Woodlands</a></li>
+					<li><a href="#">Yishun</a></li>
+				</ul>
+			</div>
+		</div>
+	</form>
+</div>
+{{ template "footer" }}
+{{ end }}
