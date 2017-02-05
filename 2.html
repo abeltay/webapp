@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>1</title>
+		<title>2</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
@@ -18,63 +18,25 @@
 	<div class="page-header">
 		<h1>Welcome</h1>
 	</div>
-	<p class="lead">Please provide more information</p>
-	<form class="form-horizontal" action="2" method="get">
+	<p class="lead">Shortlisting</p>
+	<form class="form-horizontal" action="index" method="get">
+		<div class="col-sm-12 text-center">
+			<a href="#">Matching Properties <span class="badge">1000</span></a>
+		</div>
 		<div class="form-group">
-			<label class="col-sm-4 control-label">Type of Purchase</label>
+			<label class="col-sm-4 control-label">Purpose of Purchase</label>
 			<div class="btn-group col-sm-8">
-				<input type="radio" name="purchase" value="individual" checked> Individual<br>
-				<input type="radio" name="purchase" value="joint"> Joint<br>
+				<input type="radio" name="purpose" value="ownstay" checked> Own Stay<br>
+				<input type="radio" name="purpose" value="investment"> Investment<br>
 			</div>
 		</div>
 		<div class="form-group">
-			<label class="col-sm-4 control-label">Cash on Hand</label>
-			<div class="btn-group col-sm-8">
-				<input type="number" id="cashonhand" placeholder="1000">
-			</div>
-		</div>
-		<div class="form-group">
-			<label class="col-sm-4 control-label">Planning Area</label>
+			<label class="col-sm-4 control-label">Tenure</label>
 			<div class="col-sm-8">
-				<select class="form-control" name="planningarea" id="planningarea">
-					<option value=""></option>
-					<option value="Ang Mo Kio">Ang Mo Kio</option>
-					<option value="Bedok">Bedok</option>
-					<option value="Bishan">Bishan</option>
-					<option value="Bukit Batok">Bukit Batok</option>
-					<option value="Bukit Merah">Bukit Merah</option>
-					<option value="Bukit Panjang">Bukit Panjang</option>
-					<option value="Bukit Timah">Bukit Timah</option>
-					<option value="Choa Chu Kang">Choa Chu Kang</option>
-					<option value="Clementi">Clementi</option>
-					<option value="Downtown Core">Downtown Core</option>
-					<option value="Geylang">Geylang</option>
-					<option value="Hougang">Hougang</option>
-					<option value="Jurong East">Jurong East</option>
-					<option value="Jurong West">Jurong West</option>
-					<option value="Kallang">Kallang</option>
-					<option value="Mandai">Mandai</option>
-					<option value="Marine Parade">Marine Parade</option>
-					<option value="Museum">Museum</option>
-					<option value="Newton">Newton</option>
-					<option value="Novena">Novena</option>
-					<option value="Orchard">Orchard</option>
-					<option value="Outram">Outram</option>
-					<option value="Pasir Ris">Pasir Ris</option>
-					<option value="Punggol">Punggol</option>
-					<option value="Queenstown">Queenstown</option>
-					<option value="River Valley">River Valley</option>
-					<option value="Rochor">Rochor</option>
-					<option value="Sembawang">Sembawang</option>
-					<option value="Sengkang">Sengkang</option>
-					<option value="Serangoon">Serangoon</option>
-					<option value="Singapore River">Singapore River</option>
-					<option value="Southern Islands">Southern Islands</option>
-					<option value="Tampines">Tampines</option>
-					<option value="Tanglin">Tanglin</option>
-					<option value="Toa Payoh">Toa Payoh</option>
-					<option value="Woodlands">Woodlands</option>
-					<option value="Yishun">Yishun</option>
+				<select name="tenure" id="tenure">
+					<option selected="selected" value=""></option>
+					<option value="1">Freehold Group</option>
+					<option value="2">Leasehold Group</option>
 				</select>
 			</div>
 		</div>
