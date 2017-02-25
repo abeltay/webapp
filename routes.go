@@ -10,7 +10,7 @@ var templateDir = "template/"
 var templates = template.Must(template.ParseFiles(
 	templateDir+"index.tmpl",
 	templateDir+"1.tmpl",
-	templateDir+"2.tmpl",
+	templateDir+"shortlist.tmpl",
 	templateDir+"header.tmpl",
 	templateDir+"footer.tmpl"))
 
@@ -34,9 +34,9 @@ func One(w http.ResponseWriter, r *http.Request) {
 
 func Two(w http.ResponseWriter, r *http.Request) {
 	p := &Page{
-		Title: "2",
+		Title: "shortlist",
 	}
-	renderTemplate(w, "2", p)
+	renderTemplate(w, "shortlist", p)
 }
 
 func renderTemplate(w http.ResponseWriter, tmpl string, data *Page) {

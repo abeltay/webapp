@@ -1,0 +1,404 @@
+{{ define "shortlist" }}
+{{ template "header" . }}
+<div class="container">
+	<div class="page-header">
+		<h1>Welcome</h1>
+	</div>
+	<p class="lead">Shortlisting</p>
+	<form class="form" action="index" method="get">
+		<div class="form-group col-xs-12 col-sm-6">
+			<label class="col-xs-4">Project Name</label>
+			<div class="btn-group col-xs-8">
+				<input class="form-control" type="text" name="projectname">
+				<small>Please separate Project Name using ','</small>
+			</div>
+		</div>
+		<div class="form-group col-xs-12 col-sm-6">
+			<label class="col-xs-4">Postal District</label>
+			<div class="btn-group col-xs-8">
+				<input class="form-control" type="text" name="postal">
+				<small>Please separate Postal District using ','</small>
+			</div>
+		</div>
+		<div class="form-group col-xs-12 col-sm-6">
+			<label class="col-xs-4">Street Name</label>
+			<div class="btn-group col-xs-8">
+				<input class="form-control" type="text" name="streetName">
+			</div>
+		</div>
+		<div class="form-group col-xs-12 col-sm-6">
+			<label class="col-xs-4 control-label">Property Type</label>
+			<div class="checkbox col-xs-8">
+				<label><input type="checkbox" value="" checked> Apartment</label>
+				<label><input type="checkbox" value="" checked> Condominium</label>
+				<label><input type="checkbox" value="" checked> Executive Condominium</label>
+			</div>
+		</div>
+		<div class="form-group col-xs-12 col-sm-6">
+			<label class="col-xs-4">Planning Area</label>
+			<div class="col-xs-8">
+				<select class="form-control" name="planningarea" id="planningarea">
+					<option value=""></option>
+					<option value="Ang Mo Kio">Ang Mo Kio</option>
+					<option value="Bedok">Bedok</option>
+					<option value="Bishan">Bishan</option>
+					<option value="Bukit Batok">Bukit Batok</option>
+					<option value="Bukit Merah">Bukit Merah</option>
+					<option value="Bukit Panjang">Bukit Panjang</option>
+					<option value="Bukit Timah">Bukit Timah</option>
+					<option value="Choa Chu Kang">Choa Chu Kang</option>
+					<option value="Clementi">Clementi</option>
+					<option value="Downtown Core">Downtown Core</option>
+					<option value="Geylang">Geylang</option>
+					<option value="Hougang">Hougang</option>
+					<option value="Jurong East">Jurong East</option>
+					<option value="Jurong West">Jurong West</option>
+					<option value="Kallang">Kallang</option>
+					<option value="Mandai">Mandai</option>
+					<option value="Marine Parade">Marine Parade</option>
+					<option value="Museum">Museum</option>
+					<option value="Newton">Newton</option>
+					<option value="Novena">Novena</option>
+					<option value="Orchard">Orchard</option>
+					<option value="Outram">Outram</option>
+					<option value="Pasir Ris">Pasir Ris</option>
+					<option value="Punggol">Punggol</option>
+					<option value="Queenstown">Queenstown</option>
+					<option value="River Valley">River Valley</option>
+					<option value="Rochor">Rochor</option>
+					<option value="Sembawang">Sembawang</option>
+					<option value="Sengkang">Sengkang</option>
+					<option value="Serangoon">Serangoon</option>
+					<option value="Singapore River">Singapore River</option>
+					<option value="Southern Islands">Southern Islands</option>
+					<option value="Tampines">Tampines</option>
+					<option value="Tanglin">Tanglin</option>
+					<option value="Toa Payoh">Toa Payoh</option>
+					<option value="Woodlands">Woodlands</option>
+					<option value="Yishun">Yishun</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group col-xs-12 col-sm-6">
+			<label class="col-xs-4">Avg Area (Sqft)</label>
+			<div class="btn-group col-xs-8">
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">From:</span>
+					<input class="form-control" type="text" aria-describedby="basic-addon1" name="sqftFrom">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">To:</span>
+					<input class="form-control" type="text" aria-describedby="basic-addon1" name="sqftTo">
+				</div>
+			</div>
+		</div>
+		<div class="form-group col-xs-12 col-sm-6">
+			<label class="col-xs-4">Transacted Price ($)</label>
+			<div class="btn-group col-xs-8">
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">From:</span>
+					<input class="form-control" type="text" name="transactionFrom">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">To:</span>
+					<input class="form-control" type="text" name="transactionTo">
+				</div>
+			</div>
+		</div>
+		<div class="form-group col-xs-12 col-sm-6">
+			<label class="col-xs-4">Unit Price ($ psf)</label>
+			<div class="btn-group col-xs-8">
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">From:</span>
+					<input class="form-control" type="text" name="PriceFrom">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">To:</span>
+					<input class="form-control" type="text" name="PriceTo">
+				</div>
+			</div>
+		</div>
+		<div class="form-group col-xs-12 col-sm-6">
+			<label class="col-xs-4">Avg Mthly rental ($ psf)</label>
+			<div class="btn-group col-xs-8">
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">From:</span>
+					<input class="form-control" type="text" name="transactionFrom">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">To:</span>
+					<input class="form-control" type="text" name="transactionTo">
+				</div>
+			</div>
+		</div>
+		<div class="form-group col-xs-12 col-sm-6">
+			<label class="col-xs-4 control-label">Distance to MRT Station</label>
+			<div class="checkbox col-xs-8">
+				<label><input type="checkbox" value="" checked> 500m to 1km</label>
+				<label><input type="checkbox" value="" checked> more than 1km</label>
+				<label><input type="checkbox" value="" checked> within 500m</label>
+			</div>
+		</div>
+		<div class="form-group col-xs-12 col-sm-6">
+			<label class="col-xs-4">MRT Station</label>
+			<div class="col-xs-8">
+				<select class="form-control" name="tenure" id="tenure">
+					<option selected="selected" value=""></option>
+					<option value="N.A." default>N.A.</option>
+					<option value="Admiralty">Admiralty</option>
+					<option value="Aljunied">Aljunied</option>
+					<option value="Ang Mo Kio">Ang Mo Kio</option>
+					<option value="Bangkit">Bangkit</option>
+					<option value="Bartley">Bartley</option>
+					<option value="Bayshore (U/C)">Bayshore (U/C)</option>
+					<option value="Beauty World">Beauty World</option>
+					<option value="Bedok">Bedok</option>
+					<option value="Bedok North (U/C)">Bedok North (U/C)</option>
+					<option value="Bedok Reservoir (U/C)">Bedok Reservoir (U/C)</option>
+					<option value="Bencoolen (U/C)">Bencoolen (U/C)</option>
+					<option value="Bishan">Bishan</option>
+					<option value="Boon Keng">Boon Keng</option>
+					<option value="Boon Lay">Boon Lay</option>
+					<option value="Botanic Gardens">Botanic Gardens</option>
+					<option value="Bouna Vista">Bouna Vista</option>
+					<option value="Braddell">Braddell</option>
+					<option value="Bright Hill (U/C)">Bright Hill (U/C)</option>
+					<option value="Brighthill">Brighthill</option>
+					<option value="Buangkok">Buangkok</option>
+					<option value="Bugis">Bugis</option>
+					<option value="Bukit Batok">Bukit Batok</option>
+					<option value="Bukit Gombak">Bukit Gombak</option>
+					<option value="Bukit Panjang">Bukit Panjang</option>
+					<option value="Caldecott">Caldecott</option>
+					<option value="Canberra (U/C)">Canberra (U/C)</option>
+					<option value="Cashew">Cashew</option>
+					<option value="Cheng Lim">Cheng Lim</option>
+					<option value="Chinatown">Chinatown</option>
+					<option value="Chinese Garden">Chinese Garden</option>
+					<option value="Choa Chu Kang">Choa Chu Kang</option>
+					<option value="Clarke Quay">Clarke Quay</option>
+					<option value="Clementi">Clementi</option>
+					<option value="Coral Edge">Coral Edge</option>
+					<option value="Cove">Cove</option>
+					<option value="Dakota">Dakota</option>
+					<option value="Dhoby Ghaut">Dhoby Ghaut</option>
+					<option value="Dover">Dover</option>
+					<option value="Downtown">Downtown</option>
+					<option value="Eunos">Eunos</option>
+					<option value="Farmway">Farmway</option>
+					<option value="Farrer Park">Farrer Park</option>
+					<option value="Farrer Road">Farrer Road</option>
+					<option value="Fernvale">Fernvale</option>
+					<option value="Fort Canning (U/C)">Fort Canning (U/C)</option>
+					<option value="Great World (U/C)">Great World (U/C)</option>
+					<option value="Harbourfront">Harbourfront</option>
+					<option value="Havelock (U/C)">Havelock (U/C)</option>
+					<option value="Haw Par Villa">Haw Par Villa</option>
+					<option value="Hillview">Hillview</option>
+					<option value="Holland Village">Holland Village</option>
+					<option value="Hougang">Hougang</option>
+					<option value="Jalan Besar (U/C)">Jalan Besar (U/C)</option>
+					<option value="Kadaloor">Kadaloor</option>
+					<option value="Kaki Bukit (U/C)">Kaki Bukit (U/C)</option>
+					<option value="Kallang">Kallang</option>
+					<option value="Kangkar">Kangkar</option>
+					<option value="Keat Hong">Keat Hong</option>
+					<option value="Kembangan">Kembangan</option>
+					<option value="Kent Ridge">Kent Ridge</option>
+					<option value="Khatib">Khatib</option>
+					<option value="King Albert Park">King Albert Park</option>
+					<option value="Kovan">Kovan</option>
+					<option value="Labrador Park">Labrador Park</option>
+					<option value="Lakeside">Lakeside</option>
+					<option value="Lavender">Lavender</option>
+					<option value="Layar">Layar</option>
+					<option value="Lentor (U/C)">Lentor (U/C)</option>
+					<option value="Little India">Little India</option>
+					<option value="Lorong Chuan">Lorong Chuan</option>
+					<option value="Macpherson">Macpherson</option>
+					<option value="Marina Bay">Marina Bay</option>
+					<option value="Marine Parade (U/C)">Marine Parade (U/C)</option>
+					<option value="Marine Terrace (U/C)">Marine Terrace (U/C)</option>
+					<option value="Marsiling">Marsiling</option>
+					<option value="Marymount">Marymount</option>
+					<option value="Maxwell (U/C)">Maxwell (U/C)</option>
+					<option value="Mayflower (U/C)">Mayflower (U/C)</option>
+					<option value="Mountbatten">Mountbatten</option>
+					<option value="Mt Pleasant (U/C)">Mt Pleasant (U/C)</option>
+					<option value="Napier (U/C)">Napier (U/C)</option>
+					<option value="Newton">Newton</option>
+					<option value="Nicoll Highway">Nicoll Highway</option>
+					<option value="Novena">Novena</option>
+					<option value="Oasis">Oasis</option>
+					<option value="One North ">One North </option>
+					<option value="Orchard">Orchard</option>
+					<option value="Orchard Boulevard (U/C)">Orchard Boulevard (U/C)</option>
+					<option value="Outram Park">Outram Park</option>
+					<option value="Pasir Panjang">Pasir Panjang</option>
+					<option value="Pasir Ris">Pasir Ris</option>
+					<option value="Paya Lebar">Paya Lebar</option>
+					<option value="Pending">Pending</option>
+					<option value="Phoenix">Phoenix</option>
+					<option value="Potong Pasir">Potong Pasir</option>
+					<option value="Punggol">Punggol</option>
+					<option value="Queenstown">Queenstown</option>
+					<option value="Ranggung">Ranggung</option>
+					<option value="Redhill">Redhill</option>
+					<option value="Rochor">Rochor</option>
+					<option value="Rumbia">Rumbia</option>
+					<option value="Segar">Segar</option>
+					<option value="Sembawang">Sembawang</option>
+					<option value="Sengkang">Sengkang</option>
+					<option value="Serangoon">Serangoon</option>
+					<option value="Shenton Way (U/C)">Shenton Way (U/C)</option>
+					<option value="Simei">Simei</option>
+					<option value="Sin Ming (U/C)">Sin Ming (U/C)</option>
+					<option value="Sixth Avenue">Sixth Avenue</option>
+					<option value="Somerset">Somerset</option>
+					<option value="Soo Teck (U/C)">Soo Teck (U/C)</option>
+					<option value="Springleaf (U/C)">Springleaf (U/C)</option>
+					<option value="Stadium">Stadium</option>
+					<option value="Stevens">Stevens</option>
+					<option value="Tampines">Tampines</option>
+					<option value="Tampines East (U/C)">Tampines East (U/C)</option>
+					<option value="Tan Kah Kee">Tan Kah Kee</option>
+					<option value="Tanah Merah">Tanah Merah</option>
+					<option value="Tanjong Katong (U/C)">Tanjong Katong (U/C)</option>
+					<option value="Tanjong Pagar">Tanjong Pagar</option>
+					<option value="Teck Whye">Teck Whye</option>
+					<option value="Telok Ayer">Telok Ayer</option>
+					<option value="Telok Blangah">Telok Blangah</option>
+					<option value="Telok Kurau (U/C)">Telok Kurau (U/C)</option>
+					<option value="Ten Mile Junction">Ten Mile Junction</option>
+					<option value="Thanggam">Thanggam</option>
+					<option value="Tiong Bahru">Tiong Bahru</option>
+					<option value="Toa Payoh">Toa Payoh</option>
+					<option value="Ubi (U/C)">Ubi (U/C)</option>
+					<option value="Upper Changi (U/C)">Upper Changi (U/C)</option>
+					<option value="Upper Thomson (U/C)">Upper Thomson (U/C)</option>
+					<option value="Woodlands">Woodlands</option>
+					<option value="Woodlands South (U/C)">Woodlands South (U/C)</option>
+					<option value="Woodleigh">Woodleigh</option>
+					<option value="Yew Tee">Yew Tee</option>
+					<option value="Yio Chu Kang">Yio Chu Kang</option>
+					<option value="Yishun">Yishun</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group col-xs-12 col-sm-6">
+			<label class="col-xs-4">Tenure</label>
+			<div class="col-xs-8">
+				<select class="form-control" name="tenure" id="tenure">
+					<option selected="selected" value=""></option>
+					<option value="1">Freehold Group</option>
+					<option value="2">Leasehold Group</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group col-xs-12 col-sm-6">
+			<label class="col-xs-4">Completion Year</label>
+			<div class="btn-group col-xs-8">
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">From:</span>
+					<input class="form-control" type="text" name="transactionFrom">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">To:</span>
+					<input class="form-control" type="text" name="transactionTo">
+				</div>
+			</div>
+		</div>
+		<div class="form-group col-xs-12 col-sm-6">
+			<label class="col-xs-4">No of units in Project</label>
+			<div class="btn-group col-xs-8">
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">From:</span>
+					<input class="form-control" type="text" name="transactionFrom">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">To:</span>
+					<input class="form-control" type="text" name="transactionTo">
+				</div>
+			</div>
+		</div>
+		<div class="form-group col-xs-12 col-sm-6">
+			<label class="col-xs-4">No of Transaction(s)</label>
+			<div class="btn-group col-xs-8">
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">From:</span>
+					<input class="form-control" type="text" name="transactionFrom">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">To:</span>
+					<input class="form-control" type="text" name="transactionTo">
+				</div>
+			</div>
+		</div>
+		<div class="form-group col-xs-12 col-sm-6">
+			<label class="col-xs-4">No of Rental</label>
+			<div class="btn-group col-xs-8">
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">From:</span>
+					<input class="form-control" type="text" name="transactionFrom">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">To:</span>
+					<input class="form-control" type="text" name="transactionTo">
+				</div>
+			</div>
+		</div>
+		<div class="form-group col-xs-12 col-sm-6">
+			<label class="col-xs-4">Rental Yield</label>
+			<div class="btn-group col-xs-8">
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">From:</span>
+					<input class="form-control" type="text" name="transactionFrom">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">To:</span>
+					<input class="form-control" type="text" name="transactionTo">
+				</div>
+			</div>
+		</div>
+		<div class="form-group col-xs-12 col-sm-6">
+			<label class="col-xs-4">Purpose of Purchase</label>
+			<div class="col-xs-8">
+				<label><input type="radio" name="purpose" value="ownstay" checked> Own Stay</label>
+				<label><input type="radio" name="purpose" value="investment"> Investment</label>
+			</div>
+		</div>
+		<div class="form-group col-xs-12 col-sm-6">
+			<label class="col-xs-4">No of Rental VS Total Units (%)</label>
+			<div class="btn-group col-xs-8">
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">From:</span>
+					<input class="form-control" type="text" name="transactionFrom">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">To:</span>
+					<input class="form-control" type="text" name="transactionTo">
+				</div>
+			</div>
+		</div>
+		<div class="form-group col-xs-12 col-sm-6">
+			<label class="col-xs-4">Contract Date</label>
+			<div class="btn-group col-xs-8">
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">From:</span>
+					<input class="form-control" type="text" name="transactionFrom">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">To:</span>
+					<input class="form-control" type="text" name="transactionTo">
+				</div>
+			</div>
+		</div>
+		<div class="form-group col-xs-12">
+			<div class="col-xs-offset-4 col-xs-8">
+				<button type="submit" class="btn btn-default">Save</button>
+			</div>
+		</div>
+	</form>
+</div>
+{{ template "footer" }}
+{{ end }}
