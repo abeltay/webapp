@@ -34,6 +34,12 @@
 			</div>
 		</div>
 		<div class="form-group col-xs-12 col-sm-6">
+			<label class="col-xs-4">Street Name</label>
+			<div class="btn-group col-xs-8">
+				<input class="form-control" type="text" name="streetName">
+			</div>
+		</div>
+		<div class="form-group col-xs-12 col-sm-6">
 			<label class="col-xs-4 control-label">Property Type</label>
 			<div class="checkbox col-xs-8">
 				<label><input type="checkbox" value="" checked> Apartment</label>
@@ -100,6 +106,19 @@
 			</div>
 		</div>
 		<div class="form-group col-xs-12 col-sm-6">
+			<label class="col-xs-4">Transacted Price ($)</label>
+			<div class="btn-group col-xs-8">
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">From:</span>
+					<input class="form-control" type="text" name="transactionFrom">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">To:</span>
+					<input class="form-control" type="text" name="transactionTo">
+				</div>
+			</div>
+		</div>
+		<div class="form-group col-xs-12 col-sm-6">
 			<label class="col-xs-4">Unit Price ($ psf)</label>
 			<div class="btn-group col-xs-8">
 				<div class="input-group">
@@ -113,33 +132,7 @@
 			</div>
 		</div>
 		<div class="form-group col-xs-12 col-sm-6">
-			<label class="col-xs-4">No of Transaction(s)</label>
-			<div class="btn-group col-xs-8">
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">From:</span>
-					<input class="form-control" type="text" name="transactionFrom">
-				</div>
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">To:</span>
-					<input class="form-control" type="text" name="transactionTo">
-				</div>
-			</div>
-		</div>
-		<div class="form-group col-xs-12 col-sm-6">
 			<label class="col-xs-4">Avg Mthly rental ($ psf)</label>
-			<div class="btn-group col-xs-8">
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">From:</span>
-					<input class="form-control" type="text" name="transactionFrom">
-				</div>
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">To:</span>
-					<input class="form-control" type="text" name="transactionTo">
-				</div>
-			</div>
-		</div>
-		<div class="form-group col-xs-12 col-sm-6">
-			<label class="col-xs-4">No of Rental</label>
 			<div class="btn-group col-xs-8">
 				<div class="input-group">
 					<span class="input-group-addon" id="basic-addon1">From:</span>
@@ -164,6 +157,7 @@
 			<div class="col-xs-8">
 				<select class="form-control" name="tenure" id="tenure">
 					<option selected="selected" value=""></option>
+					<option value="N.A." default>N.A.</option>
 					<option value="Admiralty">Admiralty</option>
 					<option value="Aljunied">Aljunied</option>
 					<option value="Ang Mo Kio">Ang Mo Kio</option>
@@ -244,7 +238,6 @@
 					<option value="Mayflower (U/C)">Mayflower (U/C)</option>
 					<option value="Mountbatten">Mountbatten</option>
 					<option value="Mt Pleasant (U/C)">Mt Pleasant (U/C)</option>
-					<option value="N.A.">N.A.</option>
 					<option value="Napier (U/C)">Napier (U/C)</option>
 					<option value="Newton">Newton</option>
 					<option value="Nicoll Highway">Nicoll Highway</option>
@@ -255,7 +248,7 @@
 					<option value="Orchard Boulevard (U/C)">Orchard Boulevard (U/C)</option>
 					<option value="Outram Park">Outram Park</option>
 					<option value="Pasir Panjang">Pasir Panjang</option>
-					<option value="Pasir RIs">Pasir RIs</option>
+					<option value="Pasir Ris">Pasir Ris</option>
 					<option value="Paya Lebar">Paya Lebar</option>
 					<option value="Pending">Pending</option>
 					<option value="Phoenix">Phoenix</option>
@@ -306,12 +299,6 @@
 			</div>
 		</div>
 		<div class="form-group col-xs-12 col-sm-6">
-			<label class="col-xs-4">Street Name</label>
-			<div class="btn-group col-xs-8">
-				<input class="form-control" type="text" name="streetName">
-			</div>
-		</div>
-		<div class="form-group col-xs-12 col-sm-6">
 			<label class="col-xs-4">Tenure</label>
 			<div class="col-xs-8">
 				<select class="form-control" name="tenure" id="tenure">
@@ -319,19 +306,6 @@
 					<option value="1">Freehold Group</option>
 					<option value="2">Leasehold Group</option>
 				</select>
-			</div>
-		</div>
-		<div class="form-group col-xs-12 col-sm-6">
-			<label class="col-xs-4">Transacted Price ($)</label>
-			<div class="btn-group col-xs-8">
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">From:</span>
-					<input class="form-control" type="text" name="transactionFrom">
-				</div>
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">To:</span>
-					<input class="form-control" type="text" name="transactionTo">
-				</div>
 			</div>
 		</div>
 		<div class="form-group col-xs-12 col-sm-6">
@@ -349,6 +323,32 @@
 		</div>
 		<div class="form-group col-xs-12 col-sm-6">
 			<label class="col-xs-4">No of units in Project</label>
+			<div class="btn-group col-xs-8">
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">From:</span>
+					<input class="form-control" type="text" name="transactionFrom">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">To:</span>
+					<input class="form-control" type="text" name="transactionTo">
+				</div>
+			</div>
+		</div>
+		<div class="form-group col-xs-12 col-sm-6">
+			<label class="col-xs-4">No of Transaction(s)</label>
+			<div class="btn-group col-xs-8">
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">From:</span>
+					<input class="form-control" type="text" name="transactionFrom">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">To:</span>
+					<input class="form-control" type="text" name="transactionTo">
+				</div>
+			</div>
+		</div>
+		<div class="form-group col-xs-12 col-sm-6">
+			<label class="col-xs-4">No of Rental</label>
 			<div class="btn-group col-xs-8">
 				<div class="input-group">
 					<span class="input-group-addon" id="basic-addon1">From:</span>
@@ -381,7 +381,7 @@
 			</div>
 		</div>
 		<div class="form-group col-xs-12 col-sm-6">
-			<label class="col-xs-4">No of Rental VS Total Units</label>
+			<label class="col-xs-4">No of Rental VS Total Units (%)</label>
 			<div class="btn-group col-xs-8">
 				<div class="input-group">
 					<span class="input-group-addon" id="basic-addon1">From:</span>
