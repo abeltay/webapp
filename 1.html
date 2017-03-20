@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>1</title>
+		<title>Budget Calculation</title>
 		<link rel="stylesheet" href="static/bootstrap.min.css">
 		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -17,68 +17,62 @@
 		<h1>Welcome</h1>
 	</div>
 	<p class="lead">Please provide more information</p>
-	<form class="form-horizontal" action="2" method="get">
-		<div class="form-group">
-			<label class="col-xs-4 control-label">Type of Purchase</label>
+	<form class="form" action="2" method="get">
+		<div class="form-group col-xs-12 col-sm-6">
+			<label class="col-xs-4">Calculate for Individual or Joint?</label>
 			<div class="btn-group col-xs-8">
-				<input type="radio" name="purchase" value="individual" checked> Individual<br>
-				<input type="radio" name="purchase" value="joint"> Joint<br>
+				<label><input type="radio" name="calculateInd" value="individual" checked> Individual</label>
+				<label><input type="radio" name="calculateInd" value="joint"> Joint</label>
 			</div>
 		</div>
-		<div class="form-group">
-			<label class="col-xs-4 control-label">Cash on Hand</label>
+		<div class="form-group col-xs-12 col-sm-6">
+			<label class="col-xs-4">Age</label>
 			<div class="btn-group col-xs-8">
-				<input type="number" id="cashonhand" placeholder="1000">
+				<input class="form-control" type="text" name="age">
 			</div>
 		</div>
-		<div class="form-group">
-			<label class="col-xs-4 control-label">Planning Area</label>
-			<div class="col-xs-8">
-				<select class="form-control" name="planningarea" id="planningarea">
-					<option value=""></option>
-					<option value="Ang Mo Kio">Ang Mo Kio</option>
-					<option value="Bedok">Bedok</option>
-					<option value="Bishan">Bishan</option>
-					<option value="Bukit Batok">Bukit Batok</option>
-					<option value="Bukit Merah">Bukit Merah</option>
-					<option value="Bukit Panjang">Bukit Panjang</option>
-					<option value="Bukit Timah">Bukit Timah</option>
-					<option value="Choa Chu Kang">Choa Chu Kang</option>
-					<option value="Clementi">Clementi</option>
-					<option value="Downtown Core">Downtown Core</option>
-					<option value="Geylang">Geylang</option>
-					<option value="Hougang">Hougang</option>
-					<option value="Jurong East">Jurong East</option>
-					<option value="Jurong West">Jurong West</option>
-					<option value="Kallang">Kallang</option>
-					<option value="Mandai">Mandai</option>
-					<option value="Marine Parade">Marine Parade</option>
-					<option value="Museum">Museum</option>
-					<option value="Newton">Newton</option>
-					<option value="Novena">Novena</option>
-					<option value="Orchard">Orchard</option>
-					<option value="Outram">Outram</option>
-					<option value="Pasir Ris">Pasir Ris</option>
-					<option value="Punggol">Punggol</option>
-					<option value="Queenstown">Queenstown</option>
-					<option value="River Valley">River Valley</option>
-					<option value="Rochor">Rochor</option>
-					<option value="Sembawang">Sembawang</option>
-					<option value="Sengkang">Sengkang</option>
-					<option value="Serangoon">Serangoon</option>
-					<option value="Singapore River">Singapore River</option>
-					<option value="Southern Islands">Southern Islands</option>
-					<option value="Tampines">Tampines</option>
-					<option value="Tanglin">Tanglin</option>
-					<option value="Toa Payoh">Toa Payoh</option>
-					<option value="Woodlands">Woodlands</option>
-					<option value="Yishun">Yishun</option>
-				</select>
+		<div class="form-group col-xs-12 col-sm-6">
+			<label class="col-xs-4">Monthly Income (incl employer CPF)</label>
+			<div class="btn-group col-xs-8">
+				<input class="form-control" type="number" name="income">
 			</div>
 		</div>
-		<div class="form-group">
-			<div class="col-xs-offset-4 col-xs-8">
-				<button type="submit" class="btn btn-default">Save</button>
+		<div class="form-group col-xs-12 col-sm-6">
+			<label class="col-xs-4">Self Employed?</label>
+			<div class="btn-group col-xs-8">
+				<label><input type="radio" name="purpose" value="yes"> Yes</label>
+				<label><input type="radio" name="purpose" value="no" checked> No</label>
+			</div>
+		</div>
+		<div class="form-group col-xs-12 col-sm-6">
+			<label class="col-xs-4">How much do you have in your CPF OA?</label>
+			<div class="btn-group col-xs-8">
+				<input class="form-control" type="number" name="cpfoa">
+			</div>
+		</div>
+		<div class="form-group col-xs-12 col-sm-6">
+			<label class="col-xs-4">Current Loan commitment (besides Property loan)</label>
+			<div class="btn-group col-xs-8">
+				<input class="form-control" type="text" name="typeloan" placeholder="Type of loan e.g. car">
+				<input class="form-control" type="number" name="loanamt" placeholder="Mthly payment amt">
+			</div>
+		</div>
+		<div class="form-group col-xs-12 col-sm-6">
+			<label class="col-xs-4">Do you have a property currently?</label>
+			<div class="btn-group col-xs-8">
+				<label><input type="radio" name="property" value="yes"> Yes</label>
+				<label><input type="radio" name="property" value="no" checked> No</label>
+			</div>
+		</div>
+		<div class="form-group col-xs-12 col-sm-6">
+			<label class="col-xs-4">Total Cash on hand (Not Including CPF)?</label>
+			<div class="btn-group col-xs-8">
+				<input class="form-control" type="number" name="cash">
+			</div>
+		</div>
+		<div class="form-group col-xs-12">
+			<div class="text-center">
+				<button class="btn btn-primary" type="submit">Submit</button>
 			</div>
 		</div>
 	</form>
