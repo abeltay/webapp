@@ -9,7 +9,7 @@ var templateDir = "template/"
 
 var templates = template.Must(template.ParseFiles(
 	templateDir+"index.tmpl",
-	templateDir+"1.tmpl",
+	templateDir+"budget.tmpl",
 	templateDir+"shortlist.tmpl",
 	templateDir+"header.tmpl",
 	templateDir+"footer.tmpl"))
@@ -25,21 +25,27 @@ func Index(w http.ResponseWriter, r *http.Request) {
 	renderTemplate(w, "index", p)
 }
 
-func One(w http.ResponseWriter, r *http.Request) {
-	p := &Page{
-		Title: "1",
+func Budget(w http.ResponseWriter, r *http.Request) {
+	p := Page{
+		Title: "Budget Calculation",
 	}
-	renderTemplate(w, "1", p)
+	renderTemplate(w, "budget", p)
 }
 
-func Two(w http.ResponseWriter, r *http.Request) {
-	p := &Page{
-		Title: "shortlist",
+func Shortlist(w http.ResponseWriter, r *http.Request) {
+	p := struct {
+		Title string
+		Areas []string
+		MRT   []string
+	}{
+		Title: "Shortlist",
+		Areas: PlanningArea,
+		MRT:   MRT,
 	}
 	renderTemplate(w, "shortlist", p)
 }
 
-func renderTemplate(w http.ResponseWriter, tmpl string, data *Page) {
+func renderTemplate(w http.ResponseWriter, tmpl string, data interface{}) {
 	err := templates.ExecuteTemplate(w, tmpl, data)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
