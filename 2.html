@@ -18,13 +18,7 @@
 	</div>
 	<p class="lead">Shortlisting</p>
 	<form class="form" action="index" method="get">
-		<div class="form-group col-xs-12 col-sm-6">
-			<label class="col-xs-4">Project Name</label>
-			<div class="btn-group col-xs-8">
-				<input class="form-control" type="text" name="projectname">
-				<small>Please separate Project Name using ','</small>
-			</div>
-		</div>
+
 		<div class="form-group col-xs-12 col-sm-6">
 			<label class="col-xs-4">Postal District</label>
 			<div class="btn-group col-xs-8">
@@ -32,12 +26,7 @@
 				<small>Please separate Postal District using ','</small>
 			</div>
 		</div>
-		<div class="form-group col-xs-12 col-sm-6">
-			<label class="col-xs-4">Street Name</label>
-			<div class="btn-group col-xs-8">
-				<input class="form-control" type="text" name="streetName">
-			</div>
-		</div>
+
 		<div class="form-group col-xs-12 col-sm-6">
 			<label class="col-xs-4 control-label">Property Type</label>
 			<div class="checkbox col-xs-8">
@@ -46,104 +35,32 @@
 				<label><input type="checkbox" value="" checked> Executive Condominium</label>
 			</div>
 		</div>
-		<div class="form-group col-xs-12 col-sm-6">
-			<label class="col-xs-4">Planning Area</label>
-			<div class="col-xs-8">
-				<select class="form-control" name="planningarea" id="planningarea">
-					<option value=""></option>
-					<option value="Ang Mo Kio">Ang Mo Kio</option>
-					<option value="Bedok">Bedok</option>
-					<option value="Bishan">Bishan</option>
-					<option value="Bukit Batok">Bukit Batok</option>
-					<option value="Bukit Merah">Bukit Merah</option>
-					<option value="Bukit Panjang">Bukit Panjang</option>
-					<option value="Bukit Timah">Bukit Timah</option>
-					<option value="Choa Chu Kang">Choa Chu Kang</option>
-					<option value="Clementi">Clementi</option>
-					<option value="Downtown Core">Downtown Core</option>
-					<option value="Geylang">Geylang</option>
-					<option value="Hougang">Hougang</option>
-					<option value="Jurong East">Jurong East</option>
-					<option value="Jurong West">Jurong West</option>
-					<option value="Kallang">Kallang</option>
-					<option value="Mandai">Mandai</option>
-					<option value="Marine Parade">Marine Parade</option>
-					<option value="Museum">Museum</option>
-					<option value="Newton">Newton</option>
-					<option value="Novena">Novena</option>
-					<option value="Orchard">Orchard</option>
-					<option value="Outram">Outram</option>
-					<option value="Pasir Ris">Pasir Ris</option>
-					<option value="Punggol">Punggol</option>
-					<option value="Queenstown">Queenstown</option>
-					<option value="River Valley">River Valley</option>
-					<option value="Rochor">Rochor</option>
-					<option value="Sembawang">Sembawang</option>
-					<option value="Sengkang">Sengkang</option>
-					<option value="Serangoon">Serangoon</option>
-					<option value="Singapore River">Singapore River</option>
-					<option value="Southern Islands">Southern Islands</option>
-					<option value="Tampines">Tampines</option>
-					<option value="Tanglin">Tanglin</option>
-					<option value="Toa Payoh">Toa Payoh</option>
-					<option value="Woodlands">Woodlands</option>
-					<option value="Yishun">Yishun</option>
 
-				</select>
-			</div>
-		</div>
 		<div class="form-group col-xs-12 col-sm-6">
 			<label class="col-xs-4">Avg Area (Sqft)</label>
-			<div class="btn-group col-xs-8">
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">From:</span>
-					<input class="form-control" type="text" aria-describedby="basic-addon1" name="sqftFrom">
-				</div>
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">To:</span>
-					<input class="form-control" type="text" aria-describedby="basic-addon1" name="sqftTo">
-				</div>
+			<div class="input-group col-xs-8">
+				<input class="form-control text-right" type="text" aria-describedby="basic-addon1" name="sqftFrom">
+				<span class="input-group-addon" id="basic-addon1">to</span>
+				<input class="form-control" type="text" aria-describedby="basic-addon1" name="sqftTo">
 			</div>
 		</div>
 		<div class="form-group col-xs-12 col-sm-6">
 			<label class="col-xs-4">Transacted Price ($)</label>
-			<div class="btn-group col-xs-8">
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">From:</span>
-					<input class="form-control" type="text" name="transactionFrom">
-				</div>
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">To:</span>
-					<input class="form-control" type="text" name="transactionTo">
-				</div>
+			<div class="input-group col-xs-8">
+				<input class="form-control text-right" type="text" aria-describedby="basic-addon1" name="sqftFrom">
+				<span class="input-group-addon" id="basic-addon1">to</span>
+				<input class="form-control" type="text" aria-describedby="basic-addon1" name="sqftTo">
 			</div>
 		</div>
 		<div class="form-group col-xs-12 col-sm-6">
 			<label class="col-xs-4">Unit Price ($ psf)</label>
-			<div class="btn-group col-xs-8">
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">From:</span>
-					<input class="form-control" type="text" name="PriceFrom">
-				</div>
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">To:</span>
-					<input class="form-control" type="text" name="PriceTo">
-				</div>
+			<div class="input-group col-xs-8">
+				<input class="form-control text-right" type="text" aria-describedby="basic-addon1" name="sqftFrom">
+				<span class="input-group-addon" id="basic-addon1">to</span>
+				<input class="form-control" type="text" aria-describedby="basic-addon1" name="sqftTo">
 			</div>
 		</div>
-		<div class="form-group col-xs-12 col-sm-6">
-			<label class="col-xs-4">Avg Mthly rental ($ psf)</label>
-			<div class="btn-group col-xs-8">
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">From:</span>
-					<input class="form-control" type="text" name="transactionFrom">
-				</div>
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">To:</span>
-					<input class="form-control" type="text" name="transactionTo">
-				</div>
-			</div>
-		</div>
+
 		<div class="form-group col-xs-12 col-sm-6">
 			<label class="col-xs-4 control-label">Distance to MRT Station</label>
 			<div class="checkbox col-xs-8">
@@ -311,67 +228,27 @@
 		</div>
 		<div class="form-group col-xs-12 col-sm-6">
 			<label class="col-xs-4">Completion Year</label>
-			<div class="btn-group col-xs-8">
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">From:</span>
-					<input class="form-control" type="text" name="transactionFrom">
-				</div>
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">To:</span>
-					<input class="form-control" type="text" name="transactionTo">
-				</div>
+			<div class="input-group col-xs-8">
+				<input class="form-control text-right" type="text" aria-describedby="basic-addon1" name="sqftFrom">
+				<span class="input-group-addon" id="basic-addon1">to</span>
+				<input class="form-control" type="text" aria-describedby="basic-addon1" name="sqftTo">
 			</div>
 		</div>
 		<div class="form-group col-xs-12 col-sm-6">
 			<label class="col-xs-4">No of units in Project</label>
-			<div class="btn-group col-xs-8">
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">From:</span>
-					<input class="form-control" type="text" name="transactionFrom">
-				</div>
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">To:</span>
-					<input class="form-control" type="text" name="transactionTo">
-				</div>
+			<div class="input-group col-xs-8">
+				<input class="form-control text-right" type="text" aria-describedby="basic-addon1" name="sqftFrom">
+				<span class="input-group-addon" id="basic-addon1">to</span>
+				<input class="form-control" type="text" aria-describedby="basic-addon1" name="sqftTo">
 			</div>
 		</div>
-		<div class="form-group col-xs-12 col-sm-6">
-			<label class="col-xs-4">No of Transaction(s)</label>
-			<div class="btn-group col-xs-8">
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">From:</span>
-					<input class="form-control" type="text" name="transactionFrom">
-				</div>
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">To:</span>
-					<input class="form-control" type="text" name="transactionTo">
-				</div>
-			</div>
-		</div>
-		<div class="form-group col-xs-12 col-sm-6">
-			<label class="col-xs-4">No of Rental</label>
-			<div class="btn-group col-xs-8">
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">From:</span>
-					<input class="form-control" type="text" name="transactionFrom">
-				</div>
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">To:</span>
-					<input class="form-control" type="text" name="transactionTo">
-				</div>
-			</div>
-		</div>
+
 		<div class="form-group col-xs-12 col-sm-6">
 			<label class="col-xs-4">Rental Yield</label>
-			<div class="btn-group col-xs-8">
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">From:</span>
-					<input class="form-control" type="text" name="transactionFrom">
-				</div>
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">To:</span>
-					<input class="form-control" type="text" name="transactionTo">
-				</div>
+			<div class="input-group col-xs-8">
+				<input class="form-control text-right" type="text" aria-describedby="basic-addon1" name="sqftFrom">
+				<span class="input-group-addon" id="basic-addon1">to</span>
+				<input class="form-control" type="text" aria-describedby="basic-addon1" name="sqftTo">
 			</div>
 		</div>
 		<div class="form-group col-xs-12 col-sm-6">
@@ -382,31 +259,14 @@
 			</div>
 		</div>
 		<div class="form-group col-xs-12 col-sm-6">
-			<label class="col-xs-4">No of Rental VS Total Units (%)</label>
-			<div class="btn-group col-xs-8">
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">From:</span>
-					<input class="form-control" type="text" name="transactionFrom">
-				</div>
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">To:</span>
-					<input class="form-control" type="text" name="transactionTo">
-				</div>
+			<label class="col-xs-4">Rental VS Total Units (%)</label>
+			<div class="input-group col-xs-8">
+				<input class="form-control text-right" type="text" aria-describedby="basic-addon1" name="sqftFrom">
+				<span class="input-group-addon" id="basic-addon1">to</span>
+				<input class="form-control" type="text" aria-describedby="basic-addon1" name="sqftTo">
 			</div>
 		</div>
-		<div class="form-group col-xs-12 col-sm-6">
-			<label class="col-xs-4">Contract Date</label>
-			<div class="btn-group col-xs-8">
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">From:</span>
-					<input class="form-control" type="text" name="transactionFrom">
-				</div>
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">To:</span>
-					<input class="form-control" type="text" name="transactionTo">
-				</div>
-			</div>
-		</div>
+
 		<div class="form-group col-xs-12">
 			<div class="text-center">
 				<button class="btn btn-primary" type="submit">Submit</button>
