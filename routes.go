@@ -37,6 +37,7 @@ func Shortlist(w http.ResponseWriter, r *http.Request) {
 		Title string
 		Areas []string
 		MRT   []string
+		Paid  bool
 	}{
 		Title: "Shortlist",
 		Areas: PlanningArea,

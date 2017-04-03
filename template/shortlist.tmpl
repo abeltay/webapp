@@ -6,6 +6,7 @@
 	</div>
 	<p class="lead">Shortlisting</p>
 	<form class="form" action="index" method="get">
+		{{ if .Paid }}
 		<div class="form-group col-xs-12 col-sm-6">
 			<label class="col-xs-4">Project Name</label>
 			<div class="btn-group col-xs-8">
@@ -13,6 +14,7 @@
 				<small>Please separate Project Name using ','</small>
 			</div>
 		</div>
+		{{ end }}
 		<div class="form-group col-xs-12 col-sm-6">
 			<label class="col-xs-4">Postal District</label>
 			<div class="btn-group col-xs-8">
@@ -20,12 +22,14 @@
 				<small>Please separate Postal District using ','</small>
 			</div>
 		</div>
+		{{ if .Paid }}
 		<div class="form-group col-xs-12 col-sm-6">
 			<label class="col-xs-4">Street Name</label>
 			<div class="btn-group col-xs-8">
 				<input class="form-control" type="text" name="streetName">
 			</div>
 		</div>
+		{{ end }}
 		<div class="form-group col-xs-12 col-sm-6">
 			<label class="col-xs-4 control-label">Property Type</label>
 			<div class="checkbox col-xs-8">
@@ -34,6 +38,7 @@
 				<label><input type="checkbox" value="" checked> Executive Condominium</label>
 			</div>
 		</div>
+		{{ if .Paid }}
 		<div class="form-group col-xs-12 col-sm-6">
 			<label class="col-xs-4">Planning Area</label>
 			<div class="col-xs-8">
@@ -44,6 +49,7 @@
 				</select>
 			</div>
 		</div>
+		{{ end }}
 		<div class="form-group col-xs-12 col-sm-6">
 			<label class="col-xs-4">Avg Area (Sqft)</label>
 			<div class="btn-group col-xs-8">
@@ -83,6 +89,7 @@
 				</div>
 			</div>
 		</div>
+		{{ if .Paid }}
 		<div class="form-group col-xs-12 col-sm-6">
 			<label class="col-xs-4">Avg Mthly rental ($ psf)</label>
 			<div class="btn-group col-xs-8">
@@ -96,6 +103,7 @@
 				</div>
 			</div>
 		</div>
+		{{ end }}
 		<div class="form-group col-xs-12 col-sm-6">
 			<label class="col-xs-4 control-label">Distance to MRT Station</label>
 			<div class="checkbox col-xs-8">
@@ -151,6 +159,7 @@
 				</div>
 			</div>
 		</div>
+		{{ if .Paid }}
 		<div class="form-group col-xs-12 col-sm-6">
 			<label class="col-xs-4">No of Transaction(s)</label>
 			<div class="btn-group col-xs-8">
@@ -177,6 +186,7 @@
 				</div>
 			</div>
 		</div>
+		{{ end }}
 		<div class="form-group col-xs-12 col-sm-6">
 			<label class="col-xs-4">Rental Yield</label>
 			<div class="btn-group col-xs-8">
@@ -210,6 +220,7 @@
 				</div>
 			</div>
 		</div>
+		{{ if .Paid }}
 		<div class="form-group col-xs-12 col-sm-6">
 			<label class="col-xs-4">Contract Date</label>
 			<div class="btn-group col-xs-8">
@@ -223,6 +234,7 @@
 				</div>
 			</div>
 		</div>
+		{{ end }}
 		<div class="form-group col-xs-12">
 			<div class="text-center">
 				<button class="btn btn-primary" type="submit">Submit</button>
